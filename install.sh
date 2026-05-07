@@ -52,7 +52,7 @@ cat << 'EOF' > ~/.gemini/settings.json
     "inlineThinkingMode": "full",
     "footer": {
       "hideContextPercentage": false,
-      "items": ["cwd", "sandbox", "model", "context", "memory"]
+      "items": ["cwd", "sandbox", "model", "context", "memory", "approval"]
     }
   },
   "general": {
