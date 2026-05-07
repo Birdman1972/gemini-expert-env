@@ -1,0 +1,49 @@
+{
+  "ui": {
+    "showMemoryUsage": true,
+    "inlineThinkingMode": "full",
+    "footer": {
+      "hideContextPercentage": false,
+      "items": ["cwd", "sandbox", "model", "context", "memory", "approval"]
+    }
+  },
+  "general": {
+    "defaultApprovalMode": "auto_edit",
+    "topicUpdateNarration": true
+  },
+  "experimental": {
+    "enableAgents": true,
+    "memoryV2": true,
+    "autoMemory": true,
+    "worktrees": true,
+    "modelSteering": true,
+    "contextManagement": true,
+    "generalistProfile": true
+  },
+  "security": {
+    "auth": {
+      "selectedType": "oauth-personal"
+    },
+    "enablePermanentToolApproval": true,
+    "autoAddToPolicyByDefault": true,
+    "environmentVariableRedaction": {
+      "enabled": true
+    }
+  },
+  "mcpServers": {
+    "github": {
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-e",
+        "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "ghcr.io/github/github-mcp-server:latest"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "YOUR_GITHUB_TOKEN_HERE"
+      }
+    }
+  }
+}
